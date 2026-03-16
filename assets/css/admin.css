@@ -1,0 +1,262 @@
+.aiok-dashboard h1 {
+  margin-bottom: 25px;
+}
+
+/* Stats Grid */
+.aiok-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Cards */
+.aiok-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all .2s ease;
+  text-align: center;
+}
+
+.aiok-card:hover {
+  transform: translateY(-3px);
+}
+
+.aiok-card .dashicons {
+  font-size: 32px;
+  color: #2271b1;
+  margin-bottom: 1rem;
+}
+
+.aiok-card h2 {
+  font-size: 28px;
+  margin: 0;
+  color: #2271b1;
+}
+
+.aiok-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* Actions */
+.aiok-actions {
+  margin-bottom: 30px;
+}
+
+.aiok-actions .button {
+  margin-right: 10px;
+}
+
+
+/* Recent Table */
+.aiok-recent-title {
+  margin-bottom: 10px;
+}
+
+.aiok-table {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Tablet */
+@media (max-width:1024px) {
+
+  .aiok-card {
+    padding: 20px;
+  }
+
+  .aiok-card h2 {
+    font-size: 24px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width:768px) {
+
+  .aiok-dashboard h1 {
+    font-size: 20px;
+  }
+
+  .aiok-card {
+    padding: 18px;
+  }
+
+  .aiok-card h2 {
+    font-size: 22px;
+  }
+
+  .aiok-actions .button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+}
+
+/* Small mobile */
+@media (max-width:480px) {
+
+  .aiok-card {
+    padding: 15px;
+  }
+
+  .aiok-card h2 {
+    font-size: 20px;
+  }
+
+  .aiok-card p {
+    font-size: 13px;
+  }
+
+}
+
+/* bulk optimizer */
+.aiok-bulk-page {
+  max-width: 900px;
+}
+
+.aiok-bulk-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+}
+
+/* stats */
+
+.aiok-bulk-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.aiok-bulk-stat h3 {
+  font-size: 26px;
+  margin: 0;
+  color: #2271b1;
+}
+
+.aiok-bulk-stat p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+/* progress */
+
+.aiok-progress-bar {
+  height: 12px;
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+#aiok-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #2271b1, #3ba1ff);
+  transition: width .4s ease;
+}
+
+#aiok-status {
+  font-size: 13px;
+  color: #666;
+}
+
+/* actions */
+
+.aiok-bulk-actions {
+  margin-top: 20px;
+}
+
+.aiok-bulk-actions button {
+  margin-right: 10px;
+}
+
+/* mobile */
+
+@media(max-width:768px) {
+
+  .aiok-bulk-card {
+    padding: 20px;
+  }
+
+  .aiok-bulk-stat h3 {
+    font-size: 22px;
+  }
+
+}
+
+/* settings */
+/* settings boxes */
+
+.aiok-settings-box {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.aiok-settings-box h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* table layout */
+
+.aiok-settings-box .form-table th {
+  width: 250px;
+  font-weight: 600;
+}
+
+.aiok-settings-box .form-table td {
+  padding: 15px 10px;
+}
+
+/* inputs */
+
+.aiok-settings-box input[type="text"],
+.aiok-settings-box input[type="number"],
+.aiok-settings-box select {
+  min-width: 260px;
+}
+
+/* checkbox layout */
+
+.aiok-settings-box label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* save button */
+
+.aiok-save {
+  margin-top: 20px;
+}
+
+/* logs */
+.aiok-log-actions {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.logs-container{
+  text-align: start;
+}
+
+.aiok-table td:nth-child(2) {
+  font-family: monospace;
+}

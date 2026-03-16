@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Deactivator
  *
@@ -7,18 +8,20 @@
  * @package Advanced_Image_Optimization_Kaddora
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
 	exit;
 }
 
-class AIOK_Deactivator {
+class AIOK_Deactivator
+{
 
 	/**
 	 * Run deactivation tasks.
 	 *
 	 * @return void
 	 */
-	public static function deactivate() {
+	public static function deactivate()
+	{
 		self::clear_scheduled_events();
 		self::flush_rewrite_rules_if_needed();
 	}
@@ -28,19 +31,20 @@ class AIOK_Deactivator {
 	 *
 	 * @return void
 	 */
-	private static function clear_scheduled_events() {
+	private static function clear_scheduled_events()
+	{
 		$scheduled_hooks = array(
 			'aiok_bulk_optimization_cron',
 			'aiok_cleanup_logs_cron',
 			'aiok_regenerate_formats_cron',
 		);
 
-		foreach ( $scheduled_hooks as $hook ) {
-			$timestamp = wp_next_scheduled( $hook );
+		foreach ($scheduled_hooks as $hook) {
+			$timestamp = wp_next_scheduled($hook);
 
-			while ( $timestamp ) {
-				wp_unschedule_event( $timestamp, $hook );
-				$timestamp = wp_next_scheduled( $hook );
+			while ($timestamp) {
+				wp_unschedule_event($timestamp, $hook);
+				$timestamp = wp_next_scheduled($hook);
 			}
 		}
 	}
@@ -52,7 +56,8 @@ class AIOK_Deactivator {
 	 *
 	 * @return void
 	 */
-	private static function flush_rewrite_rules_if_needed() {
+	private static function flush_rewrite_rules_if_needed()
+	{
 		flush_rewrite_rules();
 	}
 }
